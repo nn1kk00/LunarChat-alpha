@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        {% load static %}
+        <head>
+            <meta name="viewport" content="width=device-width, initial-scale=0.65">
+            <link rel="stylesheet" href="{% static "css/styleNT.css" %}">
+            <title>LunarChat Settings (NT)</title>
+            <meta charset="UTF-8">
+            <style>p {
+  font-size: 12px;
+}</style>
+            <script>function red(pageUrl) {
+    window.location.href = pageUrl;
+}</script>
+        </head>
+    <center>
+    <br><br><br><br><br>
+<div class="cont" style="width: 300px">
+  Настройки профиля ({{nick}})<hr>
+  <div class="window-body has-space">
+    <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <p>Загрузить новую аватарку (.png):</p>
+    <input type="file" name="avatar" accept="image/png" required>
+    <br><br>
+    <button type="submit">Сохранить</button>
+    <button type="button" onclick="red('/')">Назад</button>
+    </form>
+  </div>
+</div>
+    </center>
+</body>
+</html>

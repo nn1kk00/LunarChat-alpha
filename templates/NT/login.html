@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        {% load static %}
+        <head>
+            <meta name="viewport" content="width=device-width, initial-scale=0.65">
+            <link rel="stylesheet" href="{% static "css/styleNT.css" %}">
+            <title>LunarChat Alpha Sign Up (NT)</title>
+            <meta chatset="UTF-8">
+            <style>p {
+  font-size: 12px;
+}</style>
+            <script>function red(pageUrl) {
+    window.location.href = pageUrl;
+}</script>
+        </head>
+    <center>
+    <br><br><br><br><br>
+<div class="cont" style="width: 300px">
+  Sign Up<hr>
+  <div class="window-body has-space">
+    <form method="post">
+    <p>Введите имя и пароль к нему</p>
+    {% csrf_token %}
+{{form.as_p}}
+<button type="submit">Создать</button>
+<button onclick="red('/')">Назад</button>
+    </form>
+  </div>
+</div>
+    </center>
+</body>
+</html>
