@@ -237,6 +237,8 @@ def data(req, msg=False, name="Bot", passw="N/a"):
     s = load_json("data.json")
     if s["chat"] == 0: return HttpResponseServerError("<h1>Server Error (500)</h1>")
     msg = req.GET.get("msg", "")
+    import html
+    msg = html.escape(msg)
     name = req.GET.get("nm", "")
     passww = req.GET.get("passw", "")
     q = req.GET.get("q", "")
