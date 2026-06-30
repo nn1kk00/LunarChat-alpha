@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <head>
+            {% load static %}
+            <link rel="stylesheet" href="{% static "css/styleNT.css" %}">
+            <title>LunarChat Alpha (NT)</title>
+            <script>function red(pageUrl) {
+    window.location.href = pageUrl;
+}</script>
+            <meta chatset="UTF-8">
+            <link type="Image/x-icon" href="{% static "favicon.ico" %}" rel="icon">
+            <meta name="viewport" content="width=device-width, initial-scale=0.65">
+            <meta property="og:title" content="LunarChat">
+            <meta property="og:description" content="Наш простой уютный чатик :з">
+            <meta property="og:color" content="#182065">
+            <style>
+h1 {
+  font-size: 24px;
+  color: black;
+}
+h2 {
+  font-style: italic;
+  font-size: 20px;
+  color: black;
+}
+p {
+  font-size: 12px;
+  color: black;
+}
+            </style>
+        </head>
+    <h2 style="color:#fff">V 1.25</h2>
+    <center>
+    <br>
+    <div class="cont" style="width: 300px">
+      <div class="title-bar">
+        {% if avatars == 0 or avatars == 1 %}
+          <div class="title-bar-text">LunarChat Profile ({{nick}})</div>
+        {% else %}
+          <div class="title-bar-text">LunarChat Profile</div>
+        {% endif %}
+        <hr>
+        <div class="title-bar-controls">
+        </div>
+      </div>
+      <div class="window-body has-space" style="display: flex">
+        <br>
+        {% if avatars == 0 %}
+          <img src="{% static "images/defuser.png" %}" width=100px height=100px>
+          <div style="width: 20px;height: 1px"></div>
+          <h2>{{nick}}<br>
+          <a href="/settings/">Настройки</a></h2>
+          <a href="/logout/">Выйти</a></h2>
+        {% elif avatars == 1 %}
+          <img src='static\images\{{nick}}.png' width=100px height=100px>
+          <div style="width: 20px;height: 1px"></div>
+          <h2>{{nick}}<br>
+          <a href="/settings/">Настройки</a></h2>
+          <a href="/logout/">Выйти</a></h2>
+        {% else %}
+          <img src="{% static "images/defuser.png" %}" width=100px height=100px>
+          <h2>Вы не авторизированы.<br><a href="login/">Регистрация</a></h2>
+        {% endif %}
+      </div>
+    </div><br>
+    <div class="cont" style="width: 300px">
+      <div class="window-body has-space">
+        <h1>LunarChat</h1><h2>- простой наш уютный чатик для старых NT :з</h2>
+        <h2><a href="rules/">Правила</a></h2>
+        <button onclick="red('off/')">Вернуться обратно</button>
+      </div>
+    </div><br>
+<div class="cont" style="width: 300px"> 
+  LunarChat Coop<hr>
+  <div class="window-body has-space" style="display: flex">
+    <form method="post">
+    <p>{{text|safe}}</p>
+    {% csrf_token %}
+    {{form.as_p}}
+<button type="submit">Отправить</button>
+    </form>
+  </div>
+</div>
+    </center>
+</body>
+</html>
