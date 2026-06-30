@@ -41,7 +41,7 @@ LunarChat Alpha позволяет взаимодействовать с пол�
 ```python manage.py runserver {айпи}:{порт 0-65535} ```
 
 # Разработчики
-- nn1kk00 (Владелец, разработчик Backend, автор проекта LunarChat)
+- nn1kk00 (Владелец, разработчик Backend и Frontend, автор проекта LunarChat)
 
 # Отдельная благодарность
 - pm (Помощь в поиске CSS)
