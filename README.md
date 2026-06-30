@@ -34,11 +34,11 @@ LunarChat Alpha позволяет взаимодействовать с пол�
 
 # Настройка & запуск
 1. Установите библиотеки
-~ pip install -r req.txt
+```shell pip install -r req.txt ```
 2. Запускаем
-~ python manage.py runserver
+```shell python manage.py runserver ```
 - Eсли есть желание развернуть НЕ на 8000 и не на localhost, то пропишите так
-~ python manage.py runserver {айпи}:{порт 0-65536}
+```shell python manage.py runserver {айпи}:{порт 0-65535} ```
 
 # Разработчики
 - nn1kk00 (Владелец, разработчик Backend, автор проекта LunarChat)
