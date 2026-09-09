@@ -45,7 +45,7 @@ LunarChat Alpha позволяет взаимодействовать с пол�
 !! Примечание. ЕСЛИ вы изменяете файлы по типу models.py, admin.py и тп, то обязательно перед запуском выполните ```python manage.py migrate```
 
 # Разработчики
-- [![nn1kk00](https://github.com/nn1kk00) (Владелец, разработчик Backend и Frontend, автор проекта LunarChat)
+- [nn1kk00](https://github.com/nn1kk00) (Владелец, разработчик Backend и Frontend, автор проекта LunarChat)
 
 # Отдельная благодарность
-- [![pm](https://github.com/pmerrs) (Помощь в поиске CSS)
+- [pm](https://github.com/pmerrs) (Помощь в поиске CSS)
